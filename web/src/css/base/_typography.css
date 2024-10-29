@@ -1,0 +1,208 @@
+/* Fonts */
+@font-face {
+  font-family: 'Brown-Bold';
+  src: url('../fonts/Brown-Bold.woff2') format('woff2'),
+    url('../fonts/Brown-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brown';
+  src: url('../fonts/Brown-Regular.woff2') format('woff2'),
+    url('../fonts/Brown-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brown-Light';
+  src: url('../fonts/Brown-Light.woff2') format('woff2'),
+    url('../fonts/Brown-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Brown-Thin';
+  src: url('../fonts/Brown-Thin.woff2') format('woff2'),
+    url('../fonts/Brown-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Chalk';
+  src: url('../fonts/ChalkBrush.woff2') format('woff2'),
+    url('../fonts/ChalkBrush.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply font-display antialiased;
+}
+
+/* Sizes */
+.blockH0 {
+  @apply text-6xl md:text-11xl;
+}
+.blockH1 {
+  @apply text-5xl md:text-10xl;
+}
+.blockH2 {
+  @apply text-3xl md:text-9xl;
+}
+.blockH3 {
+  @apply text-2xl md:text-8xl;
+}
+.blockH4 {
+  @apply text-2xl md:text-7xl;
+}
+.blockH5 {
+  @apply text-xl md:text-4xl;
+}
+.blockH6 {
+  @apply text-sm md:text-2xl font-chalk;
+}
+.blockH7 {
+  @apply text-lg md:text-xl;
+}
+.blockH8 {
+  @apply text-base md:text-lg;
+}
+.blockH9 {
+  @apply text-xs;
+}
+
+/* Rich Text */
+.richH0 {
+  @apply text-4xl md:text-10xl;
+}
+.richH1 {
+  @apply text-xl md:text-8xl;
+}
+.richH2 {
+  @apply text-lg md:text-2xl;
+}
+.richH3 {
+  @apply text-sm md:text-xl;
+}
+.richH4 {
+  @apply text-sm md:text-lg;
+}
+
+/* Buttons */
+
+.btn-red {
+  @apply blockH7 px-10 py-4 bg-red  border border-red rounded-full text-white transition-all ease-in-out duration-300 text-center focus:bg-red focus:text-white;
+}
+
+.hasHover {
+  @media (hover: hover) and (pointer: fine) {
+    .btn-red:hover {
+      @apply text-red bg-white;
+    }
+  }
+}
+
+.btn-white {
+  @apply blockH7 px-12 py-4 text-red border border-white rounded-full bg-white transition-all ease-in-out duration-300;
+}
+.btn-white:hover {
+  @apply bg-red text-white;
+}
+
+.btn-red-blue {
+  @apply blockH7 px-12 py-4 bg-red rounded-full text-white transition-all ease-in-out duration-300;
+}
+.btn-red-blue:hover {
+  @apply text-white bg-blueTint;
+}
+
+.btn-radio {
+  --bgColor: #adc3cc;
+}
+
+.btn-radio > span {
+  @apply text-base font-bold text-grey py-4 px-6 rounded-full leading-none text-center cursor-pointer flex justify-center transition-all duration-300;
+  background: var(--bgColor);
+}
+
+.btn-radio input[type='radio']:checked + span {
+  --bgColor: #ce2e49;
+}
+
+.custom-checkbox-container {
+  @apply flex space-x-4 items-center;
+}
+
+.custom-checkbox {
+  @apply h-7 w-7 rounded-full border-[2px] border-black focus:ring-0 focus:ring-grey focus:outline-none focus:text-red checked:text-red;
+}
+
+.custom-select {
+  @apply block blockH5 text-darkGrey appearance-none w-full bg-white border border-black px-4 py-3 pr-8 rounded-xl focus:ring-0 focus:ring-grey focus:outline-none focus:border-black;
+}
+
+.custom-select-form {
+  @apply block blockH7 text-darkGrey appearance-none w-full bg-white border border-black px-4 py-3 pr-8 rounded-xl focus:ring-0 focus:ring-grey focus:outline-none focus:border-black;
+}
+
+.custom-select-form-home {
+  @apply block blockH7 text-darkGrey/80  appearance-none w-full bg-white border border-black px-8 py-3 pr-8 rounded-[50px] focus:ring-0 focus:ring-grey focus:outline-none focus:border-black;
+}
+
+.custom-text-input {
+  @apply block blockH7 text-darkGrey appearance-none w-full bg-white border border-black px-4 py-3 pr-8 rounded-xl focus:ring-0 focus:ring-grey focus:outline-none focus:border-black;
+}
+
+.custom-label {
+  @apply peer-focus:font-medium absolute blockH7 text-darkGrey/80  duration-300 transform -translate-y-9 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-darkGrey/80   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-9 px-4 pointer-events-none;
+}
+
+.custom-error {
+  @apply text-red absolute right-5 top-1/2 -translate-y-1/2;
+}
+
+.custom-text-input-two {
+  @apply block blockH7 text-darkGrey appearance-none w-full bg-white border border-black px-8 py-3 pr-8 rounded-[50px] focus:ring-0 focus:ring-grey focus:outline-none focus:border-black;
+}
+
+.custom-label-two {
+  @apply peer-focus:font-medium absolute blockH7 text-darkGrey/80  duration-300 transform -translate-y-9 scale-75 top-3 z-10 origin-[0] peer-focus:left-0 peer-focus:text-darkGrey/80   peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-9 px-8 pointer-events-none;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+.list-tick {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.list-tick li {
+  background: url('/tick.png') no-repeat left top;
+  height: auto;
+  padding-top: 0px;
+  padding-left: 44px;
+}

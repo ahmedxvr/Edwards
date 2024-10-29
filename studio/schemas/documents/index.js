@@ -1,0 +1,10 @@
+export { default as homePage } from './homePage';
+export { default as redirect } from './redirect';
+export { default as settingsNav } from './settingsNav';
+export { default as settingsFooter } from './settingsFooter';
+export { default as basicPage } from './simplePage';
+export { default as modularPage } from './modularPage';
+export { default as blogPortal } from './blogPortal';
+export { default as storyCategory } from './storyCategory';
+export { default as blog } from './blog';
+export { default as story } from './story';

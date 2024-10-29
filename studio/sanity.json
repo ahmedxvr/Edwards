@@ -1,0 +1,71 @@
+{
+  "root": true,
+  "api": {
+    "projectId": "aaaxfbct",
+    "dataset": "production"
+  },
+  "project": {
+    "name": "Edwards | LTYH"
+  },
+  "graphql": [
+    {
+      "playground": false,
+      "tag": "default",
+      "workspace": "production",
+      "id": "production-20230830"
+    }
+  ],
+  "plugins": [
+    "@sanity/base",
+    "@sanity/components",
+    "@sanity/default-layout",
+    "@sanity/default-login",
+    "@sanity/desk-tool",
+    "position-input",
+    "inline-svg",
+    "media",
+    "restart-preview",
+    "@sanity/production-preview",
+    "better-slug",
+    "color-list",
+    "@sanity/color-input",
+    "@sanity/orderable-document-list"
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "@sanity/vision"
+      ]
+    }
+  },
+  "parts": [
+    {
+      "name": "part:@sanity/base/schema",
+      "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./deskStructure.js"
+    },
+    {
+      "implements": "part:@sanity/form-builder/input/image/asset-sources",
+      "path": "./assetSources.js"
+    },
+    {
+      "implements": "part:@sanity/dashboard/config",
+      "path": "./dashboardConfig.js"
+    },
+    {
+      "implements": "part:@sanity/production-preview/resolve-production-url",
+      "path": "./resolveProductionUrl.js"
+    },
+    {
+      "implements": "part:@sanity/base/brand-logo",
+      "path": "./logo/myLogo.js"
+    },
+    {
+      "implements": "part:@sanity/base/theme/variables/override-style",
+      "path": "./styles/variables.css"
+    }
+  ]
+}

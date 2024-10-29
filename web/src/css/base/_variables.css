@@ -1,0 +1,43 @@
+:root {
+  --gutter: 25px;
+  /* Spacing */
+  --spaceSmall: 4rem;
+  --spaceMed: 6rem;
+  --spaceLarge: 10rem;
+
+  --app-height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  :root {
+    --gutter: 45px;
+    --spaceSmall: 5rem;
+    --spaceMed: 10rem;
+    --spaceLarge: 18rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  :root {
+    --headerSpacer: 135px;
+    --gutter: 100px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  :root {
+    --gutter: 100px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  :root {
+    --gutter: 140px;
+  }
+}
+
+@media screen and (min-width: 2048px) {
+  :root {
+    --gutter: 12vw;
+  }
+}
